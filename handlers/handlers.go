@@ -59,7 +59,7 @@ func validoAuthorization(ctx context.Context, request events.APIGatewayProxyRequ
 
 	token := request.Headers["Authorization"]
 	if len(token) == 0 {
-		return false, 401, "Token requerido", models.Claim{}
+		return false, 401, "Token re---querido", models.Claim{}
 	}
 
 	claim, todoOK, msg, err := jwt.ProcesoToken(token, ctx.Value(models.Key("jwtSign")).(string))
