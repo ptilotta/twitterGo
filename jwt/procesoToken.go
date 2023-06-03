@@ -37,7 +37,7 @@ func ProcesoToken(tk string, JWTSign string) (*models.Claim, bool, string, error
 	}
 
 	if !tkn.Valid {
-		return &claims, false, string(""), errors.New("Token Inválido")
+		return &claims, false, string(""), errors.New("token inválido")
 	}
 
 	return &claims, false, string(""), err
